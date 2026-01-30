@@ -72,11 +72,11 @@ export default function Reflecta() {
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                  <Button variant="default" size="lg">
+                  <Button onClick={() => window.open("https://github.com/Justdan111/reflecta", "_blank")} variant="default" size="lg">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>
-                  <Button variant="outline" size="lg">
+                  <Button onClick={() => window.open("https://github.com/Justdan111/reflecta-backend", "_blank")} variant="outline" size="lg">
                     <Github className="mr-2 h-4 w-4" />
                     View Code
                   </Button>
