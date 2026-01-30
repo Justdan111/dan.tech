@@ -39,11 +39,13 @@ const projects = [
     title: "CredFlow",
     description: "Financial dashboard for managing credit records and workflows with intuitive data visualization.",
     tech: ["Next.js", "APIs", "Database"],
+    caseStudyUrl: "/projects/credflow",
   },
   {
     title: "QueueUp",
     description: "Smart queue management mobile app for digital queue systems and real-time updates.",
     tech: ["React Native", "Expo"],
+    caseStudyUrl: "/projects/queueup",
   },
   {
     title: "AgroConnect",

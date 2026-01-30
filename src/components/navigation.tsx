@@ -41,13 +41,13 @@ export function Navigation() {
       )}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        <motion.a
-          href="#"
-          className="text-xl font-bold gradient-text"
-          whileHover={{ scale: 1.02 }}
-        >
-          EN.
-        </motion.a>
+       <motion.a
+                href="#"
+                className="text-xl font-bold gradient-text"
+                whileHover={{ scale: 1.02 }}
+                >
+                &lt;/&gt; Dan.<span className="font-extrabold">Tech</span>
+                </motion.a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
