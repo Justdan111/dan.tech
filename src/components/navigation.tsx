@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "@/components/themetoggle";
+
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "./themetoggle";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -63,12 +64,12 @@ export function Navigation() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </motion.a>
           ))}
-          <ThemeToggle />
+          < ModeToggle />
         </div>
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-2">
-          <ThemeToggle />
+          < ModeToggle />
           <Button
             variant="ghost"
             size="icon"
