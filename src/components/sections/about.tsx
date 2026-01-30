@@ -12,21 +12,25 @@ const stats = [
 
 const philosophyPoints = [
   {
+    icon: Code2,
+    title: "Frontend & Mobile Experiences",
+    description:
+      "Crafting intuitive, responsive, and high-performance web and mobile interfaces with React, Next.js, and React Native.",
+  },
+  {
     icon: Database,
     title: "Backend Architecture",
-    description: "Designing scalable, maintainable systems that handle real-world complexity with elegance.",
+    description:
+      "Designing scalable APIs and systems using Go, FastAPI, MongoDB, PostgreSQL, and cloud-native tools.",
   },
   {
     icon: Brain,
-    title: "AI-Driven Systems",
-    description: "Leveraging LLMs and multi-agent systems to build intelligent, adaptive products.",
-  },
-  {
-    icon: Code2,
-    title: "Product Thinking",
-    description: "Building technology that solves real problems for users in Africa and global markets.",
+    title: "AI & Product Systems",
+    description:
+      "Building intelligent platforms and automation systems that solve real-world problems using AI and modern software design.",
   },
 ];
+
 
 export function About() {
   const ref = useRef(null);
@@ -63,10 +67,12 @@ export function About() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               Engineering <span className="gradient-text">Philosophy</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I build software that matters. From backend APIs to AI-powered platforms, 
-              I focus on creating scalable solutions that solve real-world problems.
-            </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                I build digital products across web, mobile, and backend systems. 
+                My focus is on creating scalable, user-centered, and intelligent software 
+                that solves real-world problems in Africa and beyond.
+                </p>
+
           </motion.div>
 
           {/* Philosophy cards */}
