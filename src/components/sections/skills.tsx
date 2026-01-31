@@ -5,9 +5,7 @@ import {
   Globe, 
   Smartphone, 
   Brain, 
-  Cloud, 
-  Database 
-} from "lucide-react";
+  Cloud} from "lucide-react";
 
 const skillCategories = [
   {

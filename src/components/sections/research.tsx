@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Brain, Database, Mic, Bot, Leaf } from "lucide-react";
+import { Database, Mic, Bot, Leaf } from "lucide-react";
 
 const researchItems = [
   {
@@ -62,7 +62,7 @@ export function Research() {
               className="group glass-card rounded-2xl p-6 border border-purple/20 card-hover hover:shadow-purple/10"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-purple/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-purple/10 flex items-center justify-center shrink-0">
                   <item.icon className="w-6 h-6 text-purple" />
                 </div>
                 <div className="flex-1">
