@@ -41,7 +41,7 @@ export default function SwiftEats() {
       <main className="pt-24">
         {/* Hero */}
         <section className="py-16 sm:py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-background to-emerald-500/5" />
+          <div className="absolute inset-0 bg-linear-to-br from-orange-500/5 via-background to-emerald-500/5" />
           
           <div className="container mx-auto px-6 relative z-10">
             <motion.div
@@ -207,15 +207,15 @@ export default function SwiftEats() {
                 <h2 className="text-2xl font-bold mb-4 gradient-text">Key Takeaways</h2>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
                     API-first architecture enables seamless integration across mobile and web clients
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
                     Modular design improves maintainability and extensibility
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
                     PostgreSQL with proper indexing handles transactional operations efficiently
                   </li>
                 </ul>

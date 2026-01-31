@@ -34,7 +34,7 @@ export default function ThreatIQ() {
       <main className="pt-24">
         {/* Hero */}
         <section className="py-16 sm:py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-cyan/5" />
+          <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-background to-cyan/5" />
           
           <div className="container mx-auto px-6 relative z-10">
             <motion.div
@@ -158,15 +158,15 @@ export default function ThreatIQ() {
                 <h2 className="text-2xl font-bold mb-4 gradient-text">Key Takeaways</h2>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
                     Go&apos;s concurrency model is ideal for high-throughput backend systems
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
                     PostgreSQL time-series optimizations significantly improve query performance
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
                     WebSocket batching reduces frontend re-renders while maintaining real-time feel
                   </li>
                 </ul>

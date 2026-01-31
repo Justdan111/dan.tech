@@ -112,7 +112,7 @@ export function About() {
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ delay: 0.6 + index * 0.1, type: "spring" }}
-                  className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-cyan/20 flex items-center justify-center"
+                  className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-linear-to-br from-primary/20 to-cyan/20 flex items-center justify-center"
                 >
                   <stat.icon className="w-7 h-7 text-primary" />
                 </motion.div>
