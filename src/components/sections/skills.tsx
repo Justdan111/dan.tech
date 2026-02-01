@@ -12,7 +12,7 @@ const skillCategories = [
     title: "Backend",
     icon: Server,
     color: "cyan",
-    skills: ["Go (Golang)", "FastAPI", "Node.js", "REST APIs", "System Design", "Microservices", "MongoDB", "PostgreSQL"],
+    skills: ["Go (Golang)", "FastAPI", "REST APIs", "System Design",  "MongoDB", "PostgreSQL"],
   },
   {
     title: "Frontend",
