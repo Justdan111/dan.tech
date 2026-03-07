@@ -4,11 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, Database, Brain, Rocket } from "lucide-react";
 
-const stats = [
-  { value: "15+", label: "Projects Built", icon: Rocket },
-  { value: "10+", label: "Systems Designed", icon: Database },
-  { value: "5+", label: "AI Products", icon: Brain },
-];
+
 
 const philosophyPoints = [
   {
@@ -95,35 +91,6 @@ export function About() {
             ))}
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-3 gap-6"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.5 + index * 0.1 }}
-                className="text-center"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={isInView ? { scale: 1 } : {}}
-                  transition={{ delay: 0.6 + index * 0.1, type: "spring" }}
-                  className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-linear-to-br from-primary/20 to-cyan/20 flex items-center justify-center"
-                >
-                  <stat.icon className="w-7 h-7 text-primary" />
-                </motion.div>
-                <div className="text-3xl sm:text-4xl font-bold gradient-text mb-1">
-                  {stat.value}
-                </div>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );
