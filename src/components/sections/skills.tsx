@@ -30,13 +30,13 @@ const skillCategories = [
     title: "AI & Data",
     icon: Brain,
     color: "purple",
-    skills: ["LLMs", "Multi-agent systems", "Vector databases", "SQL optimization", "Audio processing"],
+    skills: ["LLMs", "Multi-agent systems",   "Audio processing"],
   },
   {
     title: "Cloud & Tools",
     icon: Cloud,
     color: "cyan",
-    skills: ["Docker", "Git & GitHub", "Linux", "Supabase", "APIs"],
+    skills: ["Docker", "Git & GitHub",  "Supabase", "APIs"],
   },
 ];
 
