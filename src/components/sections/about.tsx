@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Database, Brain, Rocket } from "lucide-react";
+import { Code2, Database, Brain } from "lucide-react";
 
 
 
@@ -89,6 +89,7 @@ export function About() {
                 <p className="text-sm text-muted-foreground">{point.description}</p>
               </motion.div>
             ))}
+          </motion.div>
           </motion.div>
 
       </div>
