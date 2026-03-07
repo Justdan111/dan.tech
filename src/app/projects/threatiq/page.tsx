@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Github, Server, Database, Shield, Zap } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Server, Shield, MapPin, Brain, Users, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/navigation";
 import Link from "next/link";
@@ -10,20 +10,47 @@ import { Footer } from "@/components/footer";
 
 const sections = [
   {
-    title: "Problem Statement",
-    content: "Organizations struggle to monitor security threats and operational metrics in real-time. Existing solutions are either too complex, too expensive, or lack the scalability needed for growing infrastructure.",
+    title: "Why ThreatIQ",
+    content: "Many communities—especially in regions where formal reporting systems are limited—receive security information through informal channels like messaging apps, social media, or word of mouth. That information is often late, fragmented, or unverifiable, leading to slower responses and increased risk. ThreatIQ creates a central, trusted channel for reporting and verifying incidents so people and responders can act faster and more confidently.",
   },
   {
-    title: "Solution",
-    content: "ThreatIQ provides a unified dashboard for security monitoring and analytics. Built with Go for high-performance backend processing and Next.js for a responsive frontend, it delivers real-time insights with minimal latency.",
+    title: "The Solution",
+    content: "ThreatIQ is a community-driven security intelligence platform that combines trusted human reporting, location intelligence, and AI-powered risk analysis to transform fragmented information into clear, actionable intelligence. It enables real-time incident reporting, AI-assisted risk scoring, human verification workflows, and interactive map-based analytics.",
   },
 ];
 
+const howItWorks = [
+  { step: "Report", description: "Users submit incidents (suspicious activity, theft, violence, infrastructure damage, emergencies) with location, description, severity, and optional media." },
+  { step: "Analyze", description: "AI checks for duplicates, assigns a risk score, and surfaces patterns across time and place." },
+  { step: "Verify", description: "Trusted community leaders and admins confirm or flag reports to improve accuracy." },
+  { step: "Act", description: "Users receive location-based alerts and can view incidents on interactive maps and dashboards." },
+];
+
 const architecture = [
-  { icon: Server, title: "Go Backend", description: "High-performance API server handling thousands of concurrent connections" },
-  { icon: Database, title: "PostgreSQL", description: "Optimized schema for time-series security data and analytics" },
-  { icon: Shield, title: "Threat Detection", description: "Real-time anomaly detection using statistical analysis" },
-  { icon: Zap, title: "Real-time Updates", description: "WebSocket connections for instant dashboard updates" },
+  { icon: Server, title: "Next.js Frontend", description: "Responsive, security-first UI with dark mode and real-time incident feeds" },
+  { icon: Shield, title: "Golang Backend", description: "High-performance APIs for incident processing, user management, and analytics" },
+  { icon: Brain, title: "AI Engine", description: "Risk scoring, duplicate detection, and pattern analysis across reports" },
+  { icon: MapPin, title: "Location Intelligence", description: "Interactive heatmaps and map-based visualization of incidents" },
+  { icon: Users, title: "Community Verification", description: "Workflow for leaders and admins to verify and flag reports" },
+  { icon: Lock, title: "Security & Access", description: "Role-based access controls, encryption, and audit logs" },
+];
+
+const features = [
+  "Live incident feed and alerts",
+  "Interactive heatmaps and map intelligence",
+  "AI risk scoring and pattern detection",
+  "Community verification workflow",
+  "Secure, role-based access controls",
+  "Analytics and historical trend reporting",
+  "Dark-mode, security-first UI",
+  "Location-based notifications",
+];
+
+const audiences = [
+  { name: "Local Residents", description: "Neighborhood groups staying informed about nearby threats" },
+  { name: "Community Leaders & NGOs", description: "Verifying and coordinating incident response" },
+  { name: "Security Teams", description: "Emergency responders monitoring real-time intelligence" },
+  { name: "City Planners & Analysts", description: "Using historical data and trends for safety planning" },
 ];
 
 export default function ThreatIQ() {
@@ -51,7 +78,7 @@ export default function ThreatIQ() {
 
               <div className="max-w-4xl">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {["Go", "Next.js", "PostgreSQL"].map((tech) => (
+                  {["Next.js", "Golang", "AI", "Maps"].map((tech) => (
                     <span key={tech} className="px-3 py-1 text-xs font-mono bg-primary/10 text-primary rounded-full">
                       {tech}
                     </span>
@@ -62,7 +89,7 @@ export default function ThreatIQ() {
                   ThreatIQ
                 </h1>
                 <p className="text-xl sm:text-2xl text-muted-foreground mb-8">
-                  AI-Powered Security & Analytics Dashboard for monitoring system threats and operational metrics.
+                  Community-driven security intelligence platform for detecting, understanding, and responding to threats in real time.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
@@ -99,13 +126,44 @@ export default function ThreatIQ() {
                 </motion.div>
               ))}
 
+              {/* How It Works */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl font-bold mb-8 gradient-text">How It Works</h2>
+                <div className="grid gap-6">
+                  {howItWorks.map((item, index) => (
+                    <motion.div
+                      key={item.step}
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="glass-card rounded-xl p-6 card-hover"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                          <span className="text-sm font-bold text-primary">{index + 1}</span>
+                        </div>
+                        <div>
+                          <h3 className="font-semibold mb-1">{item.step}</h3>
+                          <p className="text-sm text-muted-foreground">{item.description}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
               {/* Architecture */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold mb-8 gradient-text">System Architecture</h2>
+                <h2 className="text-2xl font-bold mb-8 gradient-text">Technology & Architecture</h2>
                 <div className="grid sm:grid-cols-2 gap-6">
                   {architecture.map((item, index) => (
                     <motion.div
@@ -126,50 +184,54 @@ export default function ThreatIQ() {
                 </div>
               </motion.div>
 
-              {/* Challenges */}
+              {/* Key Features */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold mb-4 gradient-text">Challenges & Solutions</h2>
-                <div className="space-y-4">
-                  <div className="glass-card rounded-xl p-6">
-                    <h3 className="font-semibold mb-2">High-Volume Data Processing</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Implemented Go&apos;s goroutines for concurrent processing, handling 10,000+ events per second with minimal memory footprint.
-                    </p>
-                  </div>
-                  <div className="glass-card rounded-xl p-6">
-                    <h3 className="font-semibold mb-2">Real-time Dashboard Updates</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Used WebSocket connections with intelligent batching to push updates to the frontend without overwhelming the client.
-                    </p>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">Key Features</h2>
+                <div className="glass-card rounded-xl p-6">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {features.map((feature, index) => (
+                      <motion.div
+                        key={feature}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05 }}
+                        className="flex items-center gap-3"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
               </motion.div>
 
-              {/* Lessons */}
+              {/* Who Should Use */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold mb-4 gradient-text">Key Takeaways</h2>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    Go&apos;s concurrency model is ideal for high-throughput backend systems
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    PostgreSQL time-series optimizations significantly improve query performance
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    WebSocket batching reduces frontend re-renders while maintaining real-time feel
-                  </li>
-                </ul>
+                <h2 className="text-2xl font-bold mb-8 gradient-text">Who Should Use ThreatIQ</h2>
+                <div className="grid sm:grid-cols-2 gap-6">
+                  {audiences.map((audience, index) => (
+                    <motion.div
+                      key={audience.name}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="glass-card rounded-xl p-6 card-hover"
+                    >
+                      <h3 className="font-semibold mb-2">{audience.name}</h3>
+                      <p className="text-sm text-muted-foreground">{audience.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             </div>
           </div>

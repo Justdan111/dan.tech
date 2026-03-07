@@ -5,8 +5,8 @@ import { ProjectCard } from "@/components/project-card";
 const projects = [
   {
     title: "ThreatIQ",
-    description: "AI-Powered Security & Analytics Dashboard for monitoring system threats and operational metrics with scalable backend architecture.",
-    tech: ["Go", "Next.js", "PostgreSQL"],
+    description: "Community-driven security intelligence platform combining trusted human reporting, location intelligence, and AI-powered risk analysis for real-time threat detection and response.",
+    tech: ["Next.js", "Golang", "AI", "Maps"],
     featured: true,
     caseStudyUrl: "/projects/threatiq",
   },
@@ -19,8 +19,8 @@ const projects = [
   },
   {
     title: "SwiftEats",
-    description: "Scalable backend system for food ordering, menu management, and cart operations with optimized API flows.",
-    tech: ["Go", "PostgreSQL", "REST APIs"],
+    description: "Mobile app for food ordering, menu management, and cart operations with optimized API flows.",
+    tech: ["Go", "React Native", "Expo", "PostgreSQL"],
     caseStudyUrl: "/projects/swifteats",
   },
   {
