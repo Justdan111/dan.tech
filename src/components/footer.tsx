@@ -15,9 +15,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} Emmanuel Ngulube. All rights reserved.
           </p>
-          <p className="font-mono text-xs">
-            Built with <span className="text-primary">Next.js</span> & <span className="text-cyan">Framer Motion</span>
-          </p>
+         
         </motion.div>
       </div>
     </footer>
