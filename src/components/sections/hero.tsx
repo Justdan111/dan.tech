@@ -1,4 +1,4 @@
-"use client";
+
 
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Mail, FileText } from "lucide-react";

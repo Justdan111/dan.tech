@@ -1,5 +1,4 @@
 
-
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Github, Server, Shield, MapPin, Brain, Users, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
