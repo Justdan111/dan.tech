@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Database, Mic, Bot, Leaf } from "lucide-react";
+import { Database, Bot, Leaf } from "lucide-react";
 
 const researchItems = [
   {
@@ -11,12 +11,12 @@ const researchItems = [
     description: "Research on using LLMs to automatically optimize database queries for improved performance and efficiency.",
     tags: ["LLM", "SQL", "Performance"],
   },
-  {
-    icon: Mic,
-    title: "AI-Based Cough Risk Classification",
-    description: "Machine learning system for audio analysis and classification of respiratory health indicators.",
-    tags: ["Audio ML", "Healthcare", "Classification"],
-  },
+  // {
+  //   icon: Mic,
+  //   title: "AI-Based Cough Risk Classification",
+  //   description: "Machine learning system for audio analysis and classification of respiratory health indicators.",
+  //   tags: ["Audio ML", "Healthcare", "Classification"],
+  // },
   {
     icon: Bot,
     title: "Multi-Agent AI Systems",

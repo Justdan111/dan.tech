@@ -1,3 +1,4 @@
+"use client";
 
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Github, Server, Database, Brain, Activity } from "lucide-react";

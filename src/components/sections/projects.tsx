@@ -5,13 +5,21 @@ import { useRef } from "react";
 import { ProjectCard } from "@/components/project-card";
 
 const projects = [
-  {
-    title: "ThreatIQ",
-    description: "Community-driven security intelligence platform combining trusted human reporting, location intelligence, and AI-powered risk analysis for real-time threat detection and response.",
-    tech: ["Next.js", "Golang", "AI", "Maps"],
+   {
+    title: "Proxi",
+    description: "Location-based reminder platform where the mobile app handles geofencing and the backend focuses on secure data and account workflows.",
+    tech: ["Go", "Chi", "MongoDB", "JWT", "Expo", "Docker", "Railway"],
     featured: true,
-    caseStudyUrl: "/projects/threatiq",
+    caseStudyUrl: "/projects/proxi",
   },
+  {
+    title: "Reflecta",
+    description: "Mood tracking mobile app with Golang backend and MongoDB for storing emotional logs and generating insights.",
+    tech: ["React Native", "Expo", "Go", "MongoDB"],
+    caseStudyUrl: "/projects/reflecta",
+  },
+
+
   {
     title: "BizCrew AI",
     description: "AI-powered SaaS platform providing virtual AI staff (Accountant, Marketing, Support) for businesses with multi-model support.",
@@ -31,17 +39,18 @@ const projects = [
     tech: ["React", "Vite", "APIs", "AI"],
     caseStudyUrl: "/projects/seampaie",
   },
-  {
-    title: "Reflecta",
-    description: "Mood tracking mobile app with Golang backend and MongoDB for storing emotional logs and generating insights.",
-    tech: ["React Native", "Expo", "Go", "MongoDB"],
-    caseStudyUrl: "/projects/reflecta",
-  },
+
   {
     title: "CredFlow",
     description: "Financial dashboard for managing credit records and workflows with intuitive data visualization.",
     tech: ["Next.js", "APIs", "Database"],
     caseStudyUrl: "/projects/credflow",
+  },
+   {
+    title: "ThreatIQ",
+    description: "Community-driven security intelligence platform combining trusted human reporting, location intelligence, and AI-powered risk analysis for real-time threat detection and response.",
+    tech: ["Next.js", "Golang", "AI", "Maps"],
+    caseStudyUrl: "/projects/threatiq",
   },
   {
     title: "QueueUp",
