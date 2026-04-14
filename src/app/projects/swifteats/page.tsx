@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Github, Server, Database, ShoppingCart, Shield } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, ShoppingCart, MapPin, Clock3, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/navigation";
 import Link from "next/link";
@@ -9,28 +9,27 @@ import { Footer } from "@/components/footer";
 
 const sections = [
   {
-    title: "Problem Statement",
-    content: "Many food ordering platforms face backend systems that don't scale efficiently, complex cart logic that becomes difficult to maintain, and poor database design leading to performance issues. Tight coupling between frontend and backend systems often results in unreliable platforms.",
+    title: "What SwiftEats Is",
+    content: "SwiftEats is a mobile food-ordering experience that helps users discover meals, add items to a cart, and place orders quickly without friction.",
   },
   {
-    title: "Solution",
-    content: "SwiftEats was built as a modular, backend-driven system with a dedicated mobile application. The platform emphasizes API-first architecture using Go, RESTful services for core business logic, PostgreSQL for structured relational data, and role-based access control.",
+    title: "Why It Matters",
+    content: "The app focuses on speed, clarity, and convenience so people can go from hunger to checkout in a few taps, even during busy moments.",
   },
 ];
 
 const architecture = [
-  { icon: Server, title: "Go Backend", description: "Modular REST API with authentication and authorization middleware" },
-  { icon: Database, title: "PostgreSQL", description: "Relational schema optimized for transactional operations" },
-  { icon: ShoppingCart, title: "Cart System", description: "Flexible cart management with session consistency" },
-  { icon: Shield, title: "Role-Based Access", description: "Secured admin endpoints with middleware protection" },
+  { icon: ShoppingCart, title: "Simple Cart Flow", description: "Add, remove, and review items with instant feedback" },
+  { icon: MapPin, title: "Location Awareness", description: "See nearby restaurants and relevant delivery options" },
+  { icon: Clock3, title: "Fast Ordering", description: "Clean ordering flow designed to reduce time-to-checkout" },
+  { icon: Bell, title: "Order Updates", description: "Clear status updates so users know what is happening next" },
 ];
 
-const apiEndpoints = [
-  { method: "GET", path: "/menu-items", description: "Fetch available menu items" },
-  { method: "POST", path: "/cart", description: "Add items to cart" },
-  { method: "GET", path: "/cart", description: "Retrieve cart contents" },
-  { method: "POST", path: "/orders", description: "Place orders" },
-  { method: "*", path: "/admin/*", description: "Admin-only operations" },
+const userJourney = [
+  "Browse available meals and categories",
+  "Pick items and customize your cart",
+  "Place an order in a few taps",
+  "Track order progress with clear status updates",
 ];
 
 export default function SwiftEats() {
@@ -58,7 +57,7 @@ export default function SwiftEats() {
 
               <div className="max-w-4xl">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {["Go", "PostgreSQL", "REST APIs", "React Native", "Expo"].map((tech) => (
+                  {["React Native", "Expo", "Food Ordering", "Mobile UX"].map((tech) => (
                     <span key={tech} className="px-3 py-1 text-xs font-mono bg-primary/10 text-primary rounded-full">
                       {tech}
                     </span>
@@ -69,7 +68,7 @@ export default function SwiftEats() {
                   SwiftEats
                 </h1>
                 <p className="text-xl sm:text-2xl text-muted-foreground mb-8">
-                  Scalable food ordering platform with mobile app and robust backend API.
+                  A simple mobile app for discovering meals and ordering food quickly.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
@@ -77,7 +76,7 @@ export default function SwiftEats() {
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>
-                  <Button onClick={() => window.open("https://github.com/Justdan111/swiftEats-backend", "_blank")} variant="outline" size="lg">
+                  <Button onClick={() => window.open("https://github.com/Justdan111/swiftEats-mobile", "_blank")} variant="outline" size="lg">
                     <Github className="mr-2 h-4 w-4" />
                     View Code
                   </Button>
@@ -112,7 +111,7 @@ export default function SwiftEats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold mb-8 gradient-text">System Architecture</h2>
+                <h2 className="text-2xl font-bold mb-8 gradient-text">Core Experience</h2>
                 <div className="grid sm:grid-cols-2 gap-6">
                   {architecture.map((item, index) => (
                     <motion.div
@@ -139,33 +138,16 @@ export default function SwiftEats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold mb-6 gradient-text">API Design</h2>
-                <div className="glass-card rounded-xl overflow-hidden">
-                  <div className="p-4 border-b border-border/50">
-                    <span className="text-sm font-mono text-muted-foreground">Core Endpoints</span>
-                  </div>
-                  <div className="divide-y divide-border/50">
-                    {apiEndpoints.map((endpoint, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.05 }}
-                        className="p-4 flex items-center gap-4"
-                      >
-                        <span className={`px-2 py-1 text-xs font-mono rounded ${
-                          endpoint.method === "GET" ? "bg-emerald-500/20 text-emerald-400" :
-                          endpoint.method === "POST" ? "bg-blue-500/20 text-blue-400" :
-                          "bg-purple-500/20 text-purple-400"
-                        }`}>
-                          {endpoint.method}
-                        </span>
-                        <code className="text-sm font-mono text-foreground">{endpoint.path}</code>
-                        <span className="text-sm text-muted-foreground ml-auto hidden sm:block">{endpoint.description}</span>
-                      </motion.div>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">How It Works</h2>
+                <div className="glass-card rounded-xl p-6">
+                  <ul className="space-y-3 text-muted-foreground">
+                    {userJourney.map((step) => (
+                      <li key={step} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                        {step}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </motion.div>
 
@@ -175,24 +157,24 @@ export default function SwiftEats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold mb-4 gradient-text">Challenges & Solutions</h2>
+                <h2 className="text-2xl font-bold mb-4 gradient-text">Design Focus</h2>
                 <div className="space-y-4">
                   <div className="glass-card rounded-xl p-6">
-                    <h3 className="font-semibold mb-2">Designing a Flexible Cart System</h3>
+                    <h3 className="font-semibold mb-2">Fast Meal Discovery</h3>
                     <p className="text-sm text-muted-foreground">
-                      Implemented stateless API architecture with efficient relational modeling to handle dynamic cart updates while maintaining data consistency across sessions.
+                      Structured the experience so users can find meals quickly through clear categories and concise item presentation.
                     </p>
                   </div>
                   <div className="glass-card rounded-xl p-6">
-                    <h3 className="font-semibold mb-2">Securing Admin Operations</h3>
+                    <h3 className="font-semibold mb-2">Low-Friction Checkout</h3>
                     <p className="text-sm text-muted-foreground">
-                      Role-based authentication using middleware ensures only authorized users can access sensitive endpoints with clear separation between business logic and API layers.
+                      Kept the cart and ordering interactions straightforward to reduce drop-off before order completion.
                     </p>
                   </div>
                   <div className="glass-card rounded-xl p-6">
-                    <h3 className="font-semibold mb-2">Performance Under Concurrent Requests</h3>
+                    <h3 className="font-semibold mb-2">Clear Order Visibility</h3>
                     <p className="text-sm text-muted-foreground">
-                      Query optimization with indexed queries and Go&apos;s concurrency model maintain fast response times with multiple simultaneous users.
+                      Designed status feedback that helps users understand each stage of their order with confidence.
                     </p>
                   </div>
                 </div>
@@ -204,19 +186,19 @@ export default function SwiftEats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold mb-4 gradient-text">Key Takeaways</h2>
+                <h2 className="text-2xl font-bold mb-4 gradient-text">Simple Summary</h2>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    API-first architecture enables seamless integration across mobile and web clients
+                    SwiftEats helps users order food faster with fewer steps
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    Modular design improves maintainability and extensibility
+                    The app experience prioritizes clarity, speed, and convenience
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    PostgreSQL with proper indexing handles transactional operations efficiently
+                    Users can browse, order, and track with minimal effort
                   </li>
                 </ul>
               </motion.div>
